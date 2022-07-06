@@ -6,12 +6,12 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 00:43:31 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/07 01:25:22 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/07/07 06:51:42 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, char *restrict src, size_t destsize)
+size_t	ft_strlcat(char *dst, char *src, size_t destsize)
 {
 	size_t	i;
 	size_t	j;
@@ -34,4 +34,9 @@ size_t	ft_strlcat(char *restrict dst, char *restrict src, size_t destsize)
 	if (destsize < dlen)
 		return (slen + destsize);
 	return (dlen + slen);
+}
+
+int	main(void)
+{
+	return (0);
 }
