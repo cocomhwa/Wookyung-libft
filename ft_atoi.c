@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 20:02:44 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/07 20:14:52 by wooshin          ###   ########.fr       */
+/*   Created: 2022/07/08 14:06:50 by wooshin           #+#    #+#             */
+/*   Updated: 2022/07/08 14:13:01 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	checkspace(char c)
+
+static int	checkspace(char c)
 {
 	return ((c >= 9 && c <= 13) || c == 32);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
@@ -25,7 +26,7 @@ int	ft_atoi(char *str)
 	result = 0;
 	while (checkspace(str[i]) && str[i] != '\0')
 		i++;
-	while ((str[i] == 43 || str[i] == 45) && str[i] != '\0')
+	if ((str[i] == 43 || str[i] == 45) && str[i] != '\0')
 	{
 		if (str[i] == 45)
 			sign = !sign;
