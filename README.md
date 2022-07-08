@@ -1,2 +1,3 @@
 # 42_cocomhwa_works
-my libft project
+my 2022 libft project  
+wooshin
