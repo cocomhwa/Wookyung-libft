@@ -6,11 +6,10 @@
 #    By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/08 12:33:52 by wooshin           #+#    #+#              #
-#    Updated: 2022/07/08 12:43:59 by wooshin          ###   ########.fr        #
+#    Updated: 2022/07/09 23:18:51 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC=gcc
 CFLAGS=-Wall -Wextra -Werror
 RM=rm -f
 INC=includes

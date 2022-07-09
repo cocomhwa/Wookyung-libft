@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 09:10:43 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/09 11:21:25 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/07/09 22:17:57 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@ int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (c);
-	else
-		return (0);
+	return (0);
 }

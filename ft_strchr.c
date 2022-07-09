@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 11:27:39 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/09 12:10:21 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/07/09 23:21:11 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != 0)
 	{
-		if (s[i] == (char)c)
+		if (s[i] == c)
 			return ((char *)s + i);
 		i++;
 	}
-		return (0);
+	return (0);
 }

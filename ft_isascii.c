@@ -6,14 +6,11 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 19:57:31 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/09 09:05:56 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/07/09 22:17:34 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	return (c >= 0 && c <= 127);
 }

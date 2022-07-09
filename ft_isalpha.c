@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:00:19 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/08 19:15:41 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/07/09 21:52:47 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@ int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (c);
-	else
-		return (0);
+	return (0);
 }
