@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/08 19:57:31 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/09 09:05:56 by wooshin          ###   ########.fr       */
+/*   Created: 2022/07/09 09:10:43 by wooshin           #+#    #+#             */
+/*   Updated: 2022/07/09 09:29:48 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+int	isprint(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
+	if (c >= 32 && c <= 126)
+		return (c);
 	else
 		return (0);
 }
