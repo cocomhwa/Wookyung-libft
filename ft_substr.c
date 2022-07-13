@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 11:53:05 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/14 04:50:21 by wooshin          ###   ########.fr       */
+/*   Created: 2022/07/13 15:48:15 by wooshin           #+#    #+#             */
+/*   Updated: 2022/07/13 17:03:09 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t		i;
-	const char	*str1;
-	const char	*str2;
+	unsigned int	sidx;
+	char			*substring;	
 
-	i = 0;
-	str1 = s1;
-	str2 = s2;
-	while (i < n && (str1[i] != 0 && str2[i] != 0))
-	{
-		if (str1[i] != str2[i])
-			break ;
-		i++;
-	}
-	return (str1[i] - str2[i]);
+	sidx = 0;
+	substring = malloc(sizeof(char) * (len + 1));
+	if (!substring)
+		return (0);
+	return (substring);
 }

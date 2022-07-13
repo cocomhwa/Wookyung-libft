@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 01:17:59 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/13 15:11:18 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/07/14 04:37:20 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -39,4 +39,5 @@ int		ft_atoi(const char *str);
 
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+
 #endif
