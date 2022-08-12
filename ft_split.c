@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 00:01:16 by wooshin           #+#    #+#             */
-/*   Updated: 2022/08/12 05:49:37 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/13 04:08:19 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,36 @@ static size_t	wordcounter(char const *s, char c)
 	return (count);
 }
 
-static size_t	getlen(char const *s, char c)
+static size_t	wordlen(char const *s, char c, size_t idx)
 {
+	size_t	i;
 	size_t	length;
 
+	i = 0;
 	length = 0;
-	while (*s && *s != c)
+	while (s[i] && s[i] != c)
 	{
+		i++;
 		length++;
-		s++;
 	}
 	return (length);
 }
 
-static char	*ft_strndup(char *src, size_t n)
+static char	**free_res(char **s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+	{
+		free(s[i]);
+		i++;
+	}
+	free(s);
+	return (0);
+}
+
+static char	*ft_strndup(const char *src, size_t n)
 {
 	size_t	i;
 	char	*dup;
@@ -62,23 +78,34 @@ static char	*ft_strndup(char *src, size_t n)
 		dup[i] = src[i];
 		i++;
 	}
-	dup[i] = '\0';
+	dup[i] = 0;
 	return (dup);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
-	size_t	wordlen;	
 	size_t	count;
-	size_t	i;
+	size_t	res_idx;
+	size_t	s_idx;	
+	size_t	word_len;
 
-	count = wordcounter(s, c);
-	i = 0;
-	res = malloc(sizeof(char *) * count + 1);
+	res_idx = 0;
+	s_idx = 0;
+	res = malloc(sizeof(char *) * (wordcounter(s, c) + 1));
 	if (!res)
 		return (0);
-	while (i < count)
+	while (res_idx < count)
 	{
+		while (s[s_idx] != c)
+			s_idx++;
+		word_len = wordlen(s, c, s_idx);
+		res[res_idx] = ft_strndup(s, word_len);
+		if (!res[res_idx])
+			return (free_res(res));
+		res_idx++;
+		s_idx += word_len;
 	}
+	res[res_idx] = 0;
+	return (res);
 }
