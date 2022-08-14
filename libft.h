@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 01:17:59 by wooshin           #+#    #+#             */
-/*   Updated: 2022/08/13 23:22:14 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/13 23:38:02 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -16,6 +16,12 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

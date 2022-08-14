@@ -6,11 +6,12 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 04:20:49 by wooshin           #+#    #+#             */
-/*   Updated: 2022/08/13 07:00:06 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/14 07:17:20 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	wordlen(int n)
 {
@@ -34,11 +35,24 @@ static int	wordlen(int n)
 	return (len);
 }
 
-static void	devider(char numb, long inputnumb, int devidenumb)
+static void	devider(long inputnumb, int devidenumb, char *res, int i)
 {
-	numb = inputnumb / devidenumb + '0';
-	inputnumb %= devidenumb;
-	devidenumb /= 10;
+	char	numb;
+
+	if (inputnumb == 0)
+	{
+		res[i] = '0';
+		res[++i] = 0;
+		return ;
+	}
+	while (devidenumb)
+	{
+		numb = inputnumb / devidenumb + '0';
+		inputnumb %= devidenumb;
+		devidenumb /= 10;
+		res[i++] = numb;
+	}
+	res[i] = 0;
 }
 
 char	*ft_itoa(int n)
@@ -46,7 +60,6 @@ char	*ft_itoa(int n)
 	char	*res;
 	long	inputnumb;
 	int		devidenumb;
-	char	numb;
 	int		i;
 
 	inputnumb = n;
@@ -62,10 +75,6 @@ char	*ft_itoa(int n)
 	devidenumb = 1000000000;
 	while (devidenumb > inputnumb)
 		devidenumb /= 10;
-	while (devidenumb)
-	{
-		devider(numb, inputnumb, devidenumb);
-		res[i++] = numb;
-	}
+	devider(inputnumb, devidenumb, res, i);
 	return (res);
 }
