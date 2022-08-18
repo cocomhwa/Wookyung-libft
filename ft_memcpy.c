@@ -6,9 +6,10 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 01:07:45 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/13 13:37:34 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/18 09:12:47 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)

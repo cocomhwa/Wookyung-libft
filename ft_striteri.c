@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 20:49:48 by wooshin           #+#    #+#             */
-/*   Updated: 2022/08/13 21:56:30 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/18 05:05:29 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
-	size_t	len;
 
 	i = 0;
 	while (s[i])

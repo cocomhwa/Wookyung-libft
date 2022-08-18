@@ -6,12 +6,11 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 04:20:49 by wooshin           #+#    #+#             */
-/*   Updated: 2022/08/14 07:17:20 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/18 09:12:10 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	wordlen(int n)
 {

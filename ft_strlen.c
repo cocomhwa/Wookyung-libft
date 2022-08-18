@@ -6,9 +6,10 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 22:07:53 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/07 06:27:42 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/18 09:13:44 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)

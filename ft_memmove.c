@@ -6,9 +6,10 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 01:22:32 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/12 03:56:34 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/18 09:12:53 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)

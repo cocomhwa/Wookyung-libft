@@ -6,18 +6,19 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 14:00:21 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/13 14:39:18 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/18 10:14:00 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
+	void	*res;
 
-	ptr = malloc(count * size);
-	if (!ptr)
+	res = malloc(count * size);
+	if (!res)
 		return (0);
-	ft_bzero(ptr, (count * size));
-	return (ptr);
+	ft_bzero(res, (count * size));
+	return (res);
 }

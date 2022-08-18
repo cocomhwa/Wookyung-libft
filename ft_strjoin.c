@@ -6,9 +6,10 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 02:57:47 by wooshin           #+#    #+#             */
-/*   Updated: 2022/07/20 03:38:35 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/18 09:13:26 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

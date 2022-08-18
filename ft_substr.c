@@ -6,9 +6,10 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 15:48:15 by wooshin           #+#    #+#             */
-/*   Updated: 2022/08/10 00:32:23 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/18 10:31:21 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
