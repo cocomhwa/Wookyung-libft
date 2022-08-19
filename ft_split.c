@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 00:01:16 by wooshin           #+#    #+#             */
-/*   Updated: 2022/08/19 09:13:30 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/19 16:43:31 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,25 +87,23 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	size_t	count;
 	size_t	res_idx;
-	size_t	s_idx;	
 	size_t	word_len;
 
 	res_idx = 0;
-	s_idx = 0;
 	count = wordcounter(s, c);
 	res = malloc(sizeof(char *) * (count + 1));
 	if (!res)
 		return (0);
 	while (res_idx < count)
 	{
-		while (s[s_idx] != c)
-			s_idx++;
+		while (*s == c)
+			s++;
 		word_len = wordlen(s, c);
 		res[res_idx] = ft_strndup(s, word_len);
 		if (!res[res_idx])
 			return (free_res(res));
 		res_idx++;
-		s_idx += word_len;
+		s += word_len;
 	}
 	res[count] = 0;
 	return (res);
