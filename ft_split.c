@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 00:01:16 by wooshin           #+#    #+#             */
-/*   Updated: 2022/08/18 05:04:15 by wooshin          ###   ########.fr       */
+/*   Updated: 2022/08/19 09:13:30 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,8 @@ char	**ft_split(char const *s, char c)
 
 	res_idx = 0;
 	s_idx = 0;
-	count = 0;
-	res = malloc(sizeof(char *) * (wordcounter(s, c) + 1));
+	count = wordcounter(s, c);
+	res = malloc(sizeof(char *) * (count + 1));
 	if (!res)
 		return (0);
 	while (res_idx < count)
@@ -107,6 +107,6 @@ char	**ft_split(char const *s, char c)
 		res_idx++;
 		s_idx += word_len;
 	}
-	res[res_idx] = 0;
+	res[count] = 0;
 	return (res);
 }
