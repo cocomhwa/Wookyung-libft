@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/08 12:33:52 by wooshin           #+#    #+#              #
-#    Updated: 2022/08/17 08:53:33 by wooshin          ###   ########.fr        #
+#    Updated: 2022/08/19 13:40:14 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,18 +64,17 @@ SRCS_B		= ft_lstadd_back.c \
 
 OBJS_B		= $(SRCS_B:.c=.o)
 
-ifdef FLAG_BONUS
-OBJS += $(OBJS_B)
-endif
-
 all : $(NAME)
 
-bonus :
-	FLAG_BONUS=1
-	make all
+bonus : $(NAME)
 
+ifeq ($(filter bonus, $(MAKECMDGOALS)), bonus)
+$(NAME) : $(OBJS) $(OBJS_B)
+	ar rcus $(NAME) $(OBJS) $(OBJS_B)
+else
 $(NAME) : $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	ar rcus $(NAME) $(OBJS)
+endif
 
 %.o : %.c $(INC)
 	$(CC) $(CFLAGS) -c $< -o $@
