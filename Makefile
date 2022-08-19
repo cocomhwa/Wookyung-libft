@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/08 12:33:52 by wooshin           #+#    #+#              #
-#    Updated: 2022/08/19 13:40:14 by wooshin          ###   ########.fr        #
+#    Updated: 2022/08/19 16:55:43 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ NAME		= libft.a
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
-INC			= libft.h
 SRCS		= ft_atoi.c \
 			  ft_bzero.c \
 			  ft_calloc.c \
