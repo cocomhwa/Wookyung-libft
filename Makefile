@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/08 12:33:52 by wooshin           #+#    #+#              #
-#    Updated: 2022/08/19 16:55:43 by wooshin          ###   ########.fr        #
+#    Updated: 2022/08/20 09:52:06 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,7 @@ $(NAME) : $(OBJS)
 	ar rcus $(NAME) $(OBJS)
 endif
 
-%.o : %.c $(INC)
+%.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
