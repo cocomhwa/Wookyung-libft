@@ -6,12 +6,12 @@
 #    By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/08 12:33:52 by wooshin           #+#    #+#              #
-#    Updated: 2022/08/20 09:52:06 by wooshin          ###   ########.fr        #
+#    Updated: 2023/01/14 00:24:08 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libft.a
-CC			= gcc
+CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
 SRCS		= ft_atoi.c \
